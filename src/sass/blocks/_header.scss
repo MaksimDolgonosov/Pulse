@@ -11,4 +11,40 @@
         }
     }
 
+    &__oficial {
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #ffffff;
+        text-align: center;
+
+        span {
+            display: block;
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #ffffff;
+        }
+    }
+
+    &__phone {
+        display: block;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #ffffff;
+        text-decoration: none;
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
 }
