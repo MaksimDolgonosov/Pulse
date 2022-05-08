@@ -26,4 +26,26 @@
         text-transform: uppercase;
         color: #ffffff;
     }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 67px;
+    }
+
+    &__icon {
+        width: 110px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff;
+        margin-left: 60px;
+
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
 }
