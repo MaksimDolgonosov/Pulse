@@ -35,17 +35,30 @@
     }
 
     &__icon {
-        width: 110px;
+        width: 108px;
         font-size: 14px;
         font-weight: 500;
         color: #ffffff;
-        margin-left: 60px;
+        margin-left: 63px;
 
 
         img {
             display: block;
             margin: 0 auto;
             margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        margin-top: 18px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffffff;
+
+        a {
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: underline;
         }
     }
 }
