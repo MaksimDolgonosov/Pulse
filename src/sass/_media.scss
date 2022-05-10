@@ -1,4 +1,4 @@
-@media (max-width: 376px) {
+@media (max-width: 415px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -61,6 +61,8 @@
 
 
     .benefits {
+        padding-bottom: 20px;
+
         &__header {
             font-size: 25px;
         }
@@ -84,5 +86,22 @@
         &__descr {
             margin-top: 10px;
         }
+    }
+
+    .title_left {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .consultation {
+        padding-top: 25px;
+
+        &__descr {
+            margin-top: 45px;
+        }
+    }
+
+    .feed-form {
+        align-items: center;
     }
 }
