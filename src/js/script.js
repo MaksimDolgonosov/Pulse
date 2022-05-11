@@ -26,11 +26,12 @@
 const slider = tns({
     container: '.courusel__inner',
     controls: false,
-    nav: false,
     items: 1,
     slideBy: 'page',
     autoplay: false,
-    speed: 600
+    speed: 600,
+    navPosition: "bottom"
+
 });
 
 document.querySelector('.prev').addEventListener("click", function () {
