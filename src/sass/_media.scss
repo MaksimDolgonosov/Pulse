@@ -1,4 +1,4 @@
-@media (max-width: 415px) {
+@media (max-width: 376px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -103,5 +103,18 @@
 
     .feed-form {
         align-items: center;
+    }
+
+    .courusel {
+        padding: 20px 0;
+
+        &__inner {
+            width: 345px;
+
+            img {
+                width: 100%;
+            }
+
+        }
     }
 }
