@@ -40,3 +40,15 @@ document.querySelector('.prev').addEventListener("click", function () {
 document.querySelector('.next').addEventListener("click", function () {
     slider.goTo("next");
 });
+
+document.querySelector('.catalog-item__link').addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector('.catalog-item__content').classList.remove("catalog-item__content_active");
+    document.querySelector('.catalog-item__list').classList.add("catalog-item__list_active");
+});
+
+document.querySelector('.catalog-item__link-back').addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector('.catalog-item__content').classList.add("catalog-item__content_active");
+    document.querySelector('.catalog-item__list').classList.remove("catalog-item__list_active");
+});
