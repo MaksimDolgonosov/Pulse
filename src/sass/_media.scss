@@ -125,4 +125,30 @@
             display: none;
         }
     }
+
+    .catalog {
+        &__tabs {
+            flex-direction: column;
+        }
+
+        &__tab {
+            margin-bottom: 10px;
+        }
+
+        &__content {
+            margin-top: 60px;
+            display: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            transition: 1s all;
+
+            &_active {
+                display: flex;
+                transition: 1s all;
+                justify-content: center;
+            }
+        }
+    }
+
+
 }

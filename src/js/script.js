@@ -41,14 +41,36 @@ document.querySelector('.next').addEventListener("click", function () {
     slider.goTo("next");
 });
 
-document.querySelector('.catalog-item__link').addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector('.catalog-item__content').classList.remove("catalog-item__content_active");
-    document.querySelector('.catalog-item__list').classList.add("catalog-item__list_active");
+document.querySelectorAll('.catalog-item__link').forEach((item, i) => {
+    item.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.catalog-item__content')[i].classList.remove("catalog-item__content_active");
+        document.querySelectorAll('.catalog-item__list')[i].classList.add("catalog-item__list_active");
+    });
 });
 
-document.querySelector('.catalog-item__link-back').addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector('.catalog-item__content').classList.add("catalog-item__content_active");
-    document.querySelector('.catalog-item__list').classList.remove("catalog-item__list_active");
+document.querySelectorAll('.catalog-item__link-back').forEach((item, i) => {
+    item.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.catalog-item__content')[i].classList.add("catalog-item__content_active");
+        document.querySelectorAll('.catalog-item__list')[i].classList.remove("catalog-item__list_active");
+    });
 });
+
+document.querySelectorAll('.catalog__tab').forEach((item, i) => {
+    item.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.catalog__tab').forEach(content => {
+            content.classList.remove("catalog__tab_active");
+        });
+
+        document.querySelectorAll('.catalog__content').forEach(content => {
+            content.classList.remove("catalog__content_active");
+        });
+
+        document.querySelectorAll('.catalog__tab')[i].classList.add("catalog__tab_active");
+        document.querySelectorAll('.catalog__content')[i].classList.add("catalog__content_active");
+
+    });
+});
+
