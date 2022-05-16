@@ -74,3 +74,31 @@ document.querySelectorAll('.catalog__tab').forEach((item, i) => {
     });
 });
 
+
+document.querySelectorAll('[data-modal="consultation"]').forEach(button => {
+    button.addEventListener("click", e => {
+        document.querySelector(".overlay").style.display = "block";
+        document.querySelector("#consultation").style.display = "block";
+        document.body.style.overflow = "hidden";
+    });
+});
+
+document.querySelectorAll('[data-modal="order"]').forEach(modal => {
+    modal.addEventListener("click", e => {
+        document.querySelector(".overlay").style.display = "block";
+        console.log(modal);
+        document.querySelector("#order").style.display = "block";
+
+        document.body.style.overflow = "hidden";
+    });
+});
+
+document.querySelectorAll('.modal__close').forEach(closeButton => {
+    closeButton.addEventListener("click", () => {
+        document.querySelectorAll('.modal').forEach(modal => {
+            document.querySelector(".overlay").style.display = "none";
+            modal.style.display = "none";
+            document.body.style.overflow = "";
+        });
+    });
+});
