@@ -102,3 +102,6 @@ document.querySelectorAll('.modal__close').forEach(closeButton => {
         });
     });
 });
+
+
+$("[name=tel]").mask("+375(99)999-99-99");
