@@ -83,10 +83,10 @@ document.querySelectorAll('[data-modal="consultation"]').forEach(button => {
     });
 });
 
-document.querySelectorAll('[data-modal="order"]').forEach(modal => {
+document.querySelectorAll('[data-modal="order"]').forEach((modal, i) => {
     modal.addEventListener("click", e => {
         document.querySelector(".overlay").style.display = "block";
-        console.log(modal);
+        document.querySelector("#order").querySelector(".modal__descr").textContent = document.querySelectorAll(".catalog-item__subtitle")[i].textContent;
         document.querySelector("#order").style.display = "block";
 
         document.body.style.overflow = "hidden";
