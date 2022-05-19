@@ -104,7 +104,7 @@ document.querySelectorAll('.modal__close').forEach(closeButton => {
 });
 
 
-$("[name=tel]").mask("+375(99)999-99-99");
+$("[name=phone]").mask("+375(99)999-99-99");
 
 // отправка формы
 const forms = document.querySelectorAll("form");
@@ -117,17 +117,24 @@ function postData(form) {
         const request = new XMLHttpRequest();
         request.open("POST", "mailer/smart.php");
         const formData = new FormData(form);
-        let jsonRequest = {};
-        formData.forEach((item, key) => {
-            jsonRequest[key] = encodeURI(item);
-        });
-        console.log(formData);
-        console.log(jsonRequest);
-        console.log(JSON.stringify(jsonRequest));
-        request.send(JSON.stringify(jsonRequest));
-
+        request.send(formData);
         request.addEventListener("load", () => {
             console.log(request.status);
+            if (request.status == 200) {
+                form.reset();
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.style.display = "none";
+                });
+                document.querySelector('#thanks').style.display = "block";
+                setTimeout(() => {
+                    document.querySelectorAll('.modal').forEach(modal => {
+                        document.querySelector(".overlay").style.display = "none";
+                        modal.style.display = "none";
+                        document.body.style.overflow = "";
+                    });
+                }, 2000);
+            }
+
         });
     });
 }
@@ -135,25 +142,25 @@ function postData(form) {
 
 
 
-$('form').submit(function (e) {
-    e.preventDefault();
-    console.log($(this).serialize());
-    $.ajax({
-        type: "POST",
-        url: "mailer/smart.php",
-        data: $(this).serialize()
+// $('form').submit(function (e) {
+//     e.preventDefault();
+//     console.log($(this).serialize());
+//     $.ajax({
+//         type: "POST",
+//         url: "mailer/smart.php",
+//         data: $(this).serialize()
 
-    }
+//     }
 
-    ).done(function () {
+//     ).done(function () {
 
-        $(this).find("input").val("");
-        $('#consultation, #order').fadeOut();
-        $('.overlay, #thanks').fadeIn('slow');
+//         $(this).find("input").val("");
+//         $('#consultation, #order').fadeOut();
+//         $('.overlay, #thanks').fadeIn('slow');
 
-        $('form').trigger('reset');
-    });
-    return false;
-});
+//         $('form').trigger('reset');
+//     });
+//     return false;
+// });
 
 
