@@ -165,6 +165,6 @@ window.addEventListener("DOMContentLoaded", () => {
     //     return false;
     // });
 
-
+    new WOW().init();
 
 });

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulse</title>
     <link rel="icon" type="image/x-icon" href="icons/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -18,7 +19,7 @@
 </head>
 
 <body>
-    <section id="up" class="promo">
+    <section class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo"><img src="icons/main/running_main.png" alt="logo"></a>
@@ -51,7 +52,7 @@
         </div>
     </section>
 
-    <section class="benefits">
+    <section id="up" class="benefits">
         <div class="container">
             <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="benefits__items">
@@ -63,7 +64,7 @@
                     </div>
                 </div>
                 <div class="benefits__item">
-                    <img src="icons/benefits/heart.png" alt="heart">
+                    <img src="icons/benefits/heart.png" alt="heart" class="benefits__img">
                     <div class="benefits__subheader">Заботимся о здоровье</div>
                     <div class="benefits__descr">Мы работаем для того,
                         чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
@@ -498,7 +499,7 @@
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
             <div class="review__items">
-                <div class="review__item">
+                <div class="review__item fadeInUp wow">
                     <img class="review__img" src="img/reviews/1.png" alt="review">
                     <div class="review__descr">
                         <div class="review__header">Ирина Иванченко</div>
@@ -511,7 +512,7 @@
                             Спасибо, RunSmart!</div>
                     </div>
                 </div>
-                <div class="review__item">
+                <div class="review__item wow fadeInUp">
                     <img class="review__img" src="img/reviews/2.png" alt="review">
                     <div class="review__descr">
                         <div class="review__header">Иван Сёмочкин</div>
@@ -524,7 +525,7 @@
                             С ними подготовился к своему первому полумарафону! Спасибо!!!</div>
                     </div>
                 </div>
-                <div class="review__item">
+                <div class="review__item wow fadeInUp">
                     <img class="review__img" src="img/reviews/3.png" alt="review">
                     <div class="review__descr">
                         <div class="review__header">Юлия Дашкина</div>
@@ -565,7 +566,7 @@
     </footer>
 
     <div class="overlay">
-        <div class="modal" id="consultation">
+        <div class="modal animated fadeIn" id="consultation">
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
@@ -596,7 +597,7 @@
         </div>
     </div>
 
-    <a href="#up" class="pageup">
+    <a href="#up" class="pageup animated">
         <img src="icons/up.svg" alt="up">
     </a>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -605,6 +606,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/pageUp.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
